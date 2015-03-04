@@ -23,7 +23,6 @@ hooks:
 permissions:
   - object: /var/www/html/worldpress
     pattern: "**"
-    except: /var/www/html/worldpress/license.txt
     owner: apache
     group: apache
     mode: 644
