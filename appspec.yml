@@ -23,7 +23,7 @@ hooks:
 permissions:
   - object: /var/www/html/WordPress
     pattern: "**"
-    except: /var/www/html/WordPress/license.txt
+    except: "/var/www/html/WordPress/license.txt"
     owner: apache
     group: apache
     mode: 644
