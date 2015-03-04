@@ -21,7 +21,10 @@ hooks:
       timeout: 300
       runas: root
 permissions:
-  - object: /var/www/html/WordPress
+  - object: /var/www/html/worldpress
+    pattern: "**"
+    except: /var/www/html/worldpress/license.txt
     owner: apache
     group: apache
     mode: 644
+

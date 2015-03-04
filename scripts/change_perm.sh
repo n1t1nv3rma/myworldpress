@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod -R 644 /var/www/html/wordpress
+chmod -R 644 /var/www/html/worldpress
