@@ -3,6 +3,8 @@ os: linux
 files:
   - source: /WordPress
     destination: /var/www/html/worldpress
+  - source: /dbconfig/wp-config.php
+    destination: /var/www/html/worldpress/wp-config.php
 hooks:
   BeforeInstall:
     - location: scripts/install_dep.sh
