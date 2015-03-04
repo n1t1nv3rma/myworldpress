@@ -1,0 +1,29 @@
+version: 0.2
+os: linux
+files:
+  - soource: /
+    destination: /var/www/html/worldpress
+hooks:
+  BeforeInstall:
+    - location: scripts/install_dep.sh
+      timeout: 300
+      runas: root
+  AfterInstall:
+    - location: scripts/change_perm.sh
+      timeout: 300
+      runas: root
+  ApplicationStart:
+    - location: scripts/start_srv.sh
+      timeout: 300
+      runas: root
+  ApplicationStop:
+    - location: scripts/stop_srv.sh
+      timeout: 300
+      runas: root
+permissions:
+  - object: /var/www/html/WordPress
+    pattern: "**"
+    except: /var/www/html/WordPress/license.txt
+    owner: apache
+    group: apache
+    mode: 644
