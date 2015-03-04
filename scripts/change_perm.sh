@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod -R 644 /var/www/html/worldpress
+echo "Setting Perms...OK" > /var/tmp/status

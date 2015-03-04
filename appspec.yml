@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: /
+  - source: /WordPress
     destination: /var/www/html/worldpress
 hooks:
   BeforeInstall:
@@ -25,4 +25,4 @@ permissions:
     pattern: "**"
     owner: apache
     group: apache
-    mode: 644
+    mode: 750
