@@ -27,4 +27,3 @@ permissions:
     owner: apache
     group: apache
     mode: 644
-
