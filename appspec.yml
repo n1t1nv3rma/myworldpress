@@ -5,6 +5,8 @@ files:
     destination: /var/www/html/worldpress
   - source: /dbconfig/wp-config.php
     destination: /var/www/html/worldpress
+  - source: /scripts/mysql.resp
+    destination: /var/tmp
 hooks:
   BeforeInstall:
     - location: scripts/install_dep.sh
@@ -16,6 +18,12 @@ hooks:
       runas: root
   ApplicationStart:
     - location: scripts/start_srv.sh
+      timeout: 300
+      runas: root
+    - location: scripts/secure_mysql_db.sh
+      timeout: 300
+      runas: root
+    - location: scripts/create_wp_db.sh
       timeout: 300
       runas: root
   ApplicationStop:

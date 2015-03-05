@@ -19,7 +19,7 @@
 define('DB_NAME', 'worldpress');
 
 /** MySQL database username */
-define('DB_USER', 'admin');
+define('DB_USER', 'wpadmin');
 
 /** MySQL database password */
 define('DB_PASSWORD', 'passw0rd');
