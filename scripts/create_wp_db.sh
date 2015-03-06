@@ -1,7 +1,11 @@
 #!/bin/bash
-mysql --host=localhost --user=root --password=P@ssw0rd << EOF
- CREATE DATABASE worldpress;
- GRANT ALL PRIVILEGES ON worldpress.* TO "wpadmin"@"localhost" IDENTIFIED BY "wpadm1n!";
+MYSQL_ROOT_PASSWD="P@ssw0rd"
+WP_DATABASE="worldpress"
+WP_DB_USER="wpadmin"
+WP_DB_PASSWD="P@ssw0rd"
+mysql --host=localhost --user=root --password=$MYSQL_ROOT_PASSWD << EOF
+ CREATE DATABASE $WP_DATABASE;
+ GRANT ALL PRIVILEGES ON $WP_DATABASE.* TO "$WP_DB_USER"@"localhost" IDENTIFIED BY "$WP_DB_PASSWD";
  FLUSH PRIVILEGES;
  EXIT
 EOF

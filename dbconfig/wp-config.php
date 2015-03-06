@@ -22,7 +22,7 @@ define('DB_NAME', 'worldpress');
 define('DB_USER', 'wpadmin');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'passw0rd');
+define('DB_PASSWORD', 'P@ssw0rd');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
