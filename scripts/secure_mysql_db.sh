@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # start mysql server
-/etc/init.d/mysql start
+/etc/init.d/mysqld start
 
 echo "securing MySql..."
 PASSWD="P@ssw0rd"
